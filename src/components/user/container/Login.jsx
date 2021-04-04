@@ -8,6 +8,19 @@ export default class Login extends Component {
     constructor(props){
         super(props);
         this.state=InitialAuthState;
+        this.onTextChange=this.onTextChange.bind(this);
+        this.onCredentialsSubmit=this.onCredentialsSubmit.bind(this);
+    }
+    onTextChange(e){
+      console.log(e);
+      this.setState({
+        [e.target.name]:e.target.value
+      },()=>console.log(this.state))
+    }
+    onCredentialsSubmit(e){
+      e.preventDefault();
+      //service 
+
     }
     render() {
         return (
@@ -26,7 +39,9 @@ export default class Login extends Component {
       className="form-control" 
       id="email" 
       name="email"
-      placeholder="Please enter your email!"/>
+      placeholder="Please enter your email!"
+      onChange={(e)=>this.onTextChange}
+      />
      
     </div>
     <div className="form-group">
@@ -37,6 +52,7 @@ export default class Login extends Component {
       id="password"
       name="password" 
       placeholder="Please Enter Your password!"/>
+      onChange={(e)=>this.onTextChange}
     </div>
     <button 
     type="submit" 
