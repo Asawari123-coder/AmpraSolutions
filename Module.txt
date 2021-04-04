@@ -1,0 +1,43 @@
+
+----------------- User Login Registration Module -------------------------
+shared
+	Header.jsx
+	Footer.jsx
+components
+	Home
+		Presentation 
+			Home.jsx
+	User
+		Presentation 
+			Login.jsx 
+			Register.jsx
+
+Layout.jsx
+
+---------------------
+Login.jsx
+	Fields
+		Email
+		Password
+	Button
+
+Register.jsx
+	Fields
+		FirstName
+		LastName
+		Email
+		Password
+		Confirm Password
+	Button
+
+------------------------
+
+bootswatch
+react-router-dom
+reactstrap
+validator
+
+	
+
+		
+ 
